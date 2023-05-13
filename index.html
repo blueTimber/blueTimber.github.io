@@ -2,6 +2,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+
+        <script>
+            function resizeIframe(obj) {
+              obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+            }
+        </script>
     </head>
     <body>
         <div class="intro">
@@ -10,8 +16,23 @@
                 <p class="subtitle">Portfolio</p>
             </span>
         </div>
-        <!-- <div>
-            Test
-        </div> -->
+        <div id="aboutCont">
+            <div class="sideImg" id="leftImg"></div>
+            <div style="position: absolute; width: 100%;">
+                <p id="aboutMe">About me</p>
+                <div id="about">
+                    <div class="about-info" id="aboutDisc">
+                        <div>
+                            <p>'Sup! I'm Jonte Herben, and I'm a 20 year old Computer Science & Engineering student at TU Delft.</p>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div class="about-info" id="aboutSkills" style="margin-left: 15vmax;">
+                        Skils: Blender, Unity, Programming
+                    </div>
+                </div>
+            </div>
+            <div class="sideImg" id="rightImg"></div>
+        </div>
     </body>
 </html>

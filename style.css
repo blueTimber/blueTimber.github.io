@@ -10,9 +10,8 @@ div.intro {
     padding: 0;
     margin-top: 0;
 
-    background-image: url('RobotRock.png');
+    background-image: url('Media/RobotRock.png');
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     background-size: cover;
     background-position: center;
 
@@ -25,6 +24,10 @@ span.title {
     padding-bottom: 10vh;
 }
 
+p, div {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 p.title {
     color: white;
     mix-blend-mode: difference;
@@ -32,9 +35,8 @@ p.title {
     margin: 0;
     padding-left: 4vw;
     padding-bottom: 0;
-
-    font-size: 200px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 11vmax;
+    
     font-weight: bold;
     line-height: 1;
 
@@ -48,8 +50,74 @@ p.subtitle {
     padding-top: 0;
     padding-left: 4vw;
 
-    font-size: 60px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3vmax;
     font-weight: bold;
     line-height: 1;
+}
+
+#aboutCont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sideImg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    width: 30vw;
+    height: 80vh;
+}
+
+#leftImg {
+    background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.4), rgb(255, 255, 255)),
+    url('Media/SipOfLife.png');
+    background-position: 20% 50%;
+}
+
+#rightImg {
+    background-image:
+    linear-gradient(to left, rgba(255, 255, 255, 0.4), rgb(255, 255, 255)),
+    url('Media/Root-rot.png');
+    background-position:center;
+}
+
+#aboutMe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    font-weight: bold;
+    text-decoration:solid;
+    font-size: 3vmax;
+}
+
+#about {
+    height: fit-content;
+    width:auto;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 100px;
+}
+
+.about-info {
+    width:fit-content;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+    background-color:rgb(220, 236, 238);
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgb(206, 206, 206);
+
+    font-size: 0.8vmax;
+    font-weight: bold;
+}
+
+#aboutDisc {
+    max-width: 20vw;
 }
