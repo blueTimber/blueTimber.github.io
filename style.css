@@ -65,8 +65,8 @@ p.subtitle {
     background-repeat: no-repeat;
     background-size: cover;
     
-    width: 30vw;
-    height: 80vh;
+    width: 40vw;
+    height: 60vh;
 }
 
 #leftImg {
@@ -83,7 +83,7 @@ p.subtitle {
     background-position:center;
 }
 
-#aboutMe {
+.header {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -106,7 +106,7 @@ p.subtitle {
 .about-info {
     width:fit-content;
     padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
     padding-left: 2vw;
     padding-right: 2vw;
 
@@ -120,4 +120,40 @@ p.subtitle {
 
 #aboutDisc {
     max-width: 20vw;
+}
+
+#protrait {
+    border-radius: 50%;
+    background-image: url('Media/Portrait.JPG');
+    background-position: 80% 40%;
+    background-size: 180%;
+    width: 5vmax;
+    height: 5vmax;
+    aspect-ratio: 1;
+}
+
+/* socials */
+.socials {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.fa-brands {
+    display: table-cell;
+    font-size: 1.4vw;
+    line-height: 1.8vw;
+    width: 1.8vw;
+    height: 1.8vw;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    border-radius: 20%;
+
+    background: gray;
+    color: rgb(220, 236, 238);
+}
+
+.fa-brands:hover {
+    opacity: 0.7;
 }

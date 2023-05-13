@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Add icon library -->
+        <script src="https://kit.fontawesome.com/c8ef8346a5.js" crossorigin="anonymous"></script>
+
         <link rel="stylesheet" href="style.css">
 
-        <script>
-            function resizeIframe(obj) {
-              obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-            }
-        </script>
     </head>
     <body>
         <div class="intro">
@@ -19,13 +17,18 @@
         <div id="aboutCont">
             <div class="sideImg" id="leftImg"></div>
             <div style="position: absolute; width: 100%;">
-                <p id="aboutMe">About me</p>
+                <p class="header">About me</p>
                 <div id="about">
                     <div class="about-info" id="aboutDisc">
-                        <div>
-                            <p>'Sup! I'm Jonte Herben, and I'm a 20 year old Computer Science & Engineering student at TU Delft.</p>
+                        <div style="display: flex;">
+                            <p style="margin: 0;">'Sup! I'm Jonte Herben, and I'm a 20 year old Computer Science & Engineering student at TU Delft.</p>
+                            <div id="protrait"></div>
                         </div>
-                        <div></div>
+                        <div class="socials">
+                            <a href="https://www.instagram.com/bluetimber_/" target="_blank" rel="noopener noreferrer" class="fa-brands fa-instagram"></a>
+                            <a href="https://bluetimber.itch.io/" target="_blank" rel="noopener noreferrer" class="fa-brands fa-itch-io"></a>
+                            <a href="https://www.linkedin.com/in/jonte-herben-a08b1523b/" target="_blank" rel="noopener noreferrer" class="fa-brands fa-linkedin-in"></a>
+                        </div>
                     </div>
                     <div class="about-info" id="aboutSkills" style="margin-left: 15vmax;">
                         Skils: Blender, Unity, Programming
@@ -33,6 +36,9 @@
                 </div>
             </div>
             <div class="sideImg" id="rightImg"></div>
+        </div>
+        <div>
+            <p class="header">Projects</p>
         </div>
     </body>
 </html>
