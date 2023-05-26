@@ -79,7 +79,7 @@ p.subtitle {
 #rightImg {
     background-image:
     linear-gradient(to left, rgba(255, 255, 255, 0.4), rgb(255, 255, 255)),
-    url('Media/Root-rot.png');
+    url('Media/SnowyMansion_Better.png');
     background-position:center;
 }
 
@@ -106,9 +106,9 @@ p.subtitle {
 .about-info {
     width:fit-content;
     padding-top: 2vh;
-    padding-bottom: 1vh;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding-bottom: 1.5vh;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
 
     background-color:rgb(220, 236, 238);
     border-radius: 15px;
@@ -136,15 +136,15 @@ p.subtitle {
 .socials {
     display: flex;
     justify-content: space-between;
-    width: 35%;
+    width: 25%;
 }
 
 .fa-brands {
     display: table-cell;
-    font-size: 1.4vw;
-    line-height: 1.8vw;
-    width: 1.8vw;
-    height: 1.8vw;
+    font-size: 1vw;
+    line-height: 1.4vw;
+    width: 1.4vw;
+    height: 1.4vw;
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
