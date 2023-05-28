@@ -2,7 +2,7 @@ html, body {
     padding: 0; 
     margin:0; 
 
-    --dark-color: #272727;
+    --dark-color: #222222;
 }
 
 body {
@@ -166,29 +166,38 @@ p.subtitle {
 
     background-color: var(--dark-color);
     border-radius: 0.7vmax;
-    padding: 0.5vmax 1vmax;
+    padding: 0.5vmax 0.5vmax;
 }
 
 .fa-chevron-left, .fa-chevron-right {
-    height: 5vmax;
+    height: fit-content;
+    font-size: 1.7vmax;
+    color: inherit;
 
     display: inline-block;
+}
 
-    --ver-scale: 1.7;
-    transform: scale(1, var(--ver-scale));
-    /* Safari and Chrome */
-    -webkit-transform: scale(1, var(--ver-scale));
-    /* Firefox */
-    -moz-transform: scale(1, var(--ver-scale));
-    /* IE 9+ */
-    -ms-transform: scale(1, var(--ver-scale));
-    /* Opera */
-    -o-transform: scale(1, var(--ver-scale));
+.fa-chevron-left::before, .fa-chevron-right::before {
+    vertical-align: middle;
+    line-height: var(--highlight-height);
+
+    padding-left: 0.3vmax;
+    padding-right: 0.3vmax;
+}
+
+.highlight-select {
+    border-radius: 0.3vmax;
+
+    color: #1d1d1d;
+}
+
+.highlight-select:hover {
+    color: #585858;
 }
 
 .highlight-browser {
-    background-color: #242424;
-
+    height: var(--highlight-height);
+    width: 30vmax;
 }
 
 /* socials */
