@@ -1,10 +1,13 @@
 html, body { 
     padding: 0; 
     margin:0; 
-    max-width: 100%;
-    overflow-x: hidden;
 
     --dark-color: #272727;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 div.intro {
@@ -155,10 +158,10 @@ p.subtitle {
 .highlights {
     position: absolute;
     width: 35vmax;
-    height: 10vmax;
+    height: 12vmax;
 
     left: 2vw;
-    bottom: 15vh;
+    bottom: 10vh;
 
     background-color: var(--dark-color);
     border-radius: 0.7vmax;
