@@ -125,7 +125,9 @@ p.subtitle {
 .faded {
     position: absolute;
     right: 13vmax;
-    bottom: 25vh;
+
+    top: 48vh; bottom: 0;
+    margin: auto;
 
     max-width: 30vmax;
     padding: 1vh 1vw;
@@ -136,7 +138,7 @@ p.subtitle {
 
 .scroll-reminder {
     position: absolute;
-    bottom: 0;
+    bottom: -0.5vmax;
     width: 15vmax;
     max-height: 0;
 
@@ -153,19 +155,40 @@ p.subtitle {
 
 @keyframes reminder-popup {
     0%   {max-height: 0;}
-    100% {max-height: 2vmax;}
+    100% {max-height: 2.5vmax;}
 }
 
 .highlights {
     position: absolute;
-    width: 35vmax;
-    height: 12vmax;
 
     left: 2vw;
     bottom: 10vh;
 
     background-color: var(--dark-color);
     border-radius: 0.7vmax;
+    padding: 0.5vmax 1vmax;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+    height: 5vmax;
+
+    display: inline-block;
+
+    --ver-scale: 1.7;
+    transform: scale(1, var(--ver-scale));
+    /* Safari and Chrome */
+    -webkit-transform: scale(1, var(--ver-scale));
+    /* Firefox */
+    -moz-transform: scale(1, var(--ver-scale));
+    /* IE 9+ */
+    -ms-transform: scale(1, var(--ver-scale));
+    /* Opera */
+    -o-transform: scale(1, var(--ver-scale));
+}
+
+.highlight-browser {
+    background-color: #242424;
+
 }
 
 /* socials */
@@ -206,6 +229,57 @@ div.sticky {
     position: sticky;
     top: 0;
     background-color: var(--dark-color);
-    padding: 40px;
+    padding: 10px 40px;
     font-size: 25px;
+
+    z-index: 200;
+}
+
+.project {
+    height: 20vmax;
+    width: 20vmax;
+
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    transition: 0.5s;
+
+    position:relative; 
+    z-index:0;
+}
+
+.project-inner {
+    height: 100%;
+    width: 100%;
+
+    background-color: #272727;
+    border-radius: 0.5vmax;
+
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    transition: 0.5s;
+
+    position: absolute;
+    overflow: clip;
+}
+
+.project:hover {
+    z-index: 100;
+}
+
+.project-inner:hover {
+    height: 60vmax;
+}
+
+.proj-img {
+    width: 15vmax;
+    height: 15vmax;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5vmax;
+    margin-bottom: 3.5vmax;
 }
