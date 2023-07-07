@@ -1,0 +1,72 @@
+.project {
+    height: 20vmax;
+    width: 20vmax;
+
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    transition: 0.5s;
+
+    position:relative; 
+    z-index:0;
+}
+  
+.project-inner {  
+    max-height: 100%;
+    width: 100%;
+
+    background-color: #272727;
+    border-radius: 0.5vmax;
+
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s;
+    transition: 0.5s;
+
+    position: absolute;
+    overflow: clip;
+}
+
+.project:hover {
+    z-index: 100;
+}
+  
+.project-inner:hover {
+    max-height: 5000px;
+}
+
+.proj-img-cont {
+    width: 15vmax;
+    
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.proj-img-cont > div > div {
+    height: 15vmax;
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.proj-img-cont > div > p {
+    color: white;
+
+    margin-top: 0;
+    margin-bottom: 2vmax;
+    font-size: 0.9vmax;
+    font-weight: 500;
+}
+
+.proj-img-cont > p {
+    color: white;
+
+    margin-top: 0.8vmax;
+    margin-bottom: 0;
+    font-size: 1.5vmax;
+    font-weight: 500;
+}
+  
