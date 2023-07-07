@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.6e112c27.css",
-    "main.js": "./static/js/main.421eca53.js",
+    "main.js": "./static/js/main.f7700e70.js",
     "static/js/787.1ed0c42c.chunk.js": "./static/js/787.1ed0c42c.chunk.js",
     "static/media/Portrait.JPG": "./static/media/Portrait.427e12be943df9acf383.JPG",
     "static/media/SnowyMansion_Better.png": "./static/media/SnowyMansion_Better.a4a4716aab368ce5737f.png",
@@ -9,11 +9,11 @@
     "static/media/RobotRock.png": "./static/media/RobotRock.762f75cb9e8db5170623.png",
     "index.html": "./index.html",
     "main.6e112c27.css.map": "./static/css/main.6e112c27.css.map",
-    "main.421eca53.js.map": "./static/js/main.421eca53.js.map",
+    "main.f7700e70.js.map": "./static/js/main.f7700e70.js.map",
     "787.1ed0c42c.chunk.js.map": "./static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6e112c27.css",
-    "static/js/main.421eca53.js"
+    "static/js/main.f7700e70.js"
   ]
 }
