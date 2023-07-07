@@ -57,7 +57,7 @@ function Highlights(props) {
     return (
         <div className='high-cont'>
             {SingleHighlight("Root-rot.png", "Game Jams", "Test description", ["Puzzlegame.png", "Root-rot.png", "SipOfLife.png"], 100, "140vw", "-20vw", "0vw")}
-            {SingleHighlight("SnowyMansion_Better.png", "Blender", "", ["Root-rot.png", "SnowyMansion_better.png", "BoatPainting.png"], 90, "140vw", "20vw", "-13vw")}
+            {SingleHighlight("SnowyMansion_Better.png", "Blender", "", ["Root-rot.png", "SnowyMansion.png", "BoatPainting.png"], 90, "140vw", "20vw", "-13vw")}
             {SingleHighlight("Peasant.png", "Unfinished Games", "", ["Root-rot.png", "Peasant.png", "Peasant.png"], 80, "140vw", "20vw", "-1vw")}
         </div>
     );
