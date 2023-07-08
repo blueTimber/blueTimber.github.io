@@ -1,54 +1,82 @@
 import './Highlights.css';
 
-function high_clicked(id, comp) {
+function high_clicked_left(id) {
     const high_doc = document.getElementById(id);
-    if (comp.target.className == 'img-right')
-    {
-        const rightmost = high_doc.getElementsByClassName('img-right1')[0];
 
-        high_doc.getElementsByClassName('img-left2')[0].className = 'img-right1';
-        high_doc.getElementsByClassName('img-left1')[0].className = 'img-left2';
-        high_doc.getElementsByClassName('img-left')[0].className = 'img-left1';
-        high_doc.getElementsByClassName('img-centre')[0].className = 'img-left';
-        high_doc.getElementsByClassName('img-right')[0].className = 'img-centre';
-        rightmost.className = 'img-right';
-    }
-    else if (comp.target.className == 'img-left') 
-    {
-        const leftmost = high_doc.getElementsByClassName('img-left2')[0];
+    const leftmost = high_doc.getElementsByClassName('img-left2')[0];
 
-        high_doc.getElementsByClassName('img-right1')[0].className = 'img-left2';
-        high_doc.getElementsByClassName('img-right')[0].className = 'img-right1';
-        high_doc.getElementsByClassName('img-centre')[0].className = 'img-right';
-        high_doc.getElementsByClassName('img-left')[0].className = 'img-centre';
-        high_doc.getElementsByClassName('img-left1')[0].className = 'img-left';
-        leftmost.className = 'img-left1';
-    }
+    high_doc.getElementsByClassName('img-right1')[0].className = 'img-left2';
+    high_doc.getElementsByClassName('img-right')[0].className = 'img-right1';
+    high_doc.getElementsByClassName('img-centre')[0].className = 'img-right';
+    high_doc.getElementsByClassName('img-left')[0].className = 'img-centre';
+    high_doc.getElementsByClassName('img-left1')[0].className = 'img-left';
+    leftmost.className = 'img-left1';
+}
+
+function high_clicked_right(id) {
+    const high_doc = document.getElementById(id);
+
+    const rightmost = high_doc.getElementsByClassName('img-right1')[0];
+
+    high_doc.getElementsByClassName('img-left2')[0].className = 'img-right1';
+    high_doc.getElementsByClassName('img-left1')[0].className = 'img-left2';
+    high_doc.getElementsByClassName('img-left')[0].className = 'img-left1';
+    high_doc.getElementsByClassName('img-centre')[0].className = 'img-left';
+    high_doc.getElementsByClassName('img-right')[0].className = 'img-centre';
+    rightmost.className = 'img-right';
 }
 
 
-function SingleHighlight(image, name, disc, images, zindex, scale, horoffset, veroffset) {
-    return(
-        <div className='highlight' style={{
-            backgroundImage: `url('media/${image}')`,
-            zIndex: zindex,
-            backgroundSize: `${scale} auto`,
-            backgroundPosition: `calc(50% + ${horoffset}) calc(50% + ${veroffset})`
-            }}>
-            <div>
-                <div id={name} className='image-cycler'>
-                    <div className='img-left2' style={{ backgroundImage: `url('media/${images[1]}')` }} onClick={(e) => high_clicked(name, e)}></div>
-                    <div className='img-left1' style={{ backgroundImage: `url('media/${images[2]}')` }} onClick={(e) => high_clicked(name, e)}></div>
-                    <div className='img-left' style={{ backgroundImage: `url('media/${images[0]}')` }} onClick={(e) => high_clicked(name, e)}></div>
-                    <div className='img-centre' style={{ backgroundImage: `url('media/${images[1]}')` }} onClick={(e) => high_clicked(name, e)}></div>
-                    <div className='img-right' style={{ backgroundImage: `url('media/${images[2]}')` }} onClick={(e) => high_clicked(name, e)}></div>
-                    <div className='img-right1' style={{ backgroundImage: `url('media/${images[0]}')` }} onClick={(e) => high_clicked(name, e)}></div>
-                </div>
-                <div>
-                    <p className='high-disc-title'>{name}</p>
-                    <p className='high-disc-body'>{disc}</p>
-                </div>
+function SingleHighlight(image, name, disc, images, zindex, scale, horoffset, veroffset, left) {
+    const cycler = (
+        <div id={name} className='image-cycler'>
+            <div className='img-left2' style={{ backgroundImage: `url('media/${images[1]}')` }} ></div>
+            <div className='img-left1' style={{ backgroundImage: `url('media/${images[2]}')` }}></div>
+            <div className='img-left' style={{ backgroundImage: `url('media/${images[0]}')` }}></div>
+            <div className='img-centre' style={{ backgroundImage: `url('media/${images[1]}')` }}></div>
+            <div className='img-right' style={{ backgroundImage: `url('media/${images[2]}')` }}></div>
+            <div className='img-right1' style={{ backgroundImage: `url('media/${images[0]}')` }}></div>
+            <div className='left-hitbox' onMouseOver={() => high_clicked_left(name)}></div>
+            <div className='right-hitbox' onMouseOver={() => high_clicked_right(name)}></div>
+        </div>
+    );
+
+    const disc_comp = (
+        <div className='disc-cont'>
+            <p className='high-disc-title'>{name}</p>
+            <p className='high-disc-body'>{disc}</p>
+        </div>
+    );
+
+    let high = null;
+
+    if (left) {
+        high = (
+            <div className='cycler-cont'>
+                {cycler}
+                {disc_comp}
             </div>
+        );
+    }
+    else {
+        high = (
+            <div className='cycler-cont'>
+                {disc_comp}
+                {cycler}
+            </div>
+        );
+    }
+
+    return(
+        <div className='highlight'>
+            <div className='highlight-img' style={{
+                backgroundImage: `url('media/${image}')`,
+                zIndex: zindex,
+                backgroundSize: `${scale} auto`,
+                backgroundPosition: `calc(50% + ${horoffset}) calc(50% + ${veroffset})`
+                }}>
+            </div>
+            {high}
         </div>
     );
 }
@@ -56,9 +84,9 @@ function SingleHighlight(image, name, disc, images, zindex, scale, horoffset, ve
 function Highlights(props) {
     return (
         <div className='high-cont'>
-            {SingleHighlight("Root-rot.png", "Game Jams", "Test description", ["Puzzlegame.png", "Root-rot.png", "SipOfLife.png"], 100, "140vw", "-20vw", "0vw")}
-            {SingleHighlight("SnowyMansion_Better.png", "Blender", "", ["Root-rot.png", "SnowyMansion.png", "BoatPainting.png"], 90, "140vw", "20vw", "-13vw")}
-            {SingleHighlight("Peasant.png", "Unfinished Games", "", ["Root-rot.png", "Peasant.png", "Peasant.png"], 80, "140vw", "20vw", "-1vw")}
+            {SingleHighlight("Root-rot.png", "Game Jams", "Test description", ["Puzzlegame.png", "Root-rot.png", "SipOfLife.png"], -100, "140vw", "-20vw", "0vw", false)}
+            {SingleHighlight("SnowyMansion.png", "Blender", "", ["FieldMeeting.png", "SnowyMansion.png", "BoatPainting.png"], -110, "140vw", "20vw", "-13vw", true)}
+            {SingleHighlight("Peasant.png", "Unfinished Games", "", ["Root-rot.png", "Peasant.png", "Peasant.png"], -120, "140vw", "20vw", "-1vw", false)}
         </div>
     );
 }

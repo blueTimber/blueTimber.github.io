@@ -41,10 +41,10 @@ function App() {
             <p style={{color: "white"}}>Test header</p>
         </div>
         <Highlights />
-        <div style={{height: "300vh"}}>
+        <div style={{height: "200vh"}}>
           <p className="header">Games</p>
           <div style={{display: "flex", justifyContent: "space-evenly", marginLeft: "auto", marginRight: "auto", flexWrap: "wrap", gap: "10px", maxWidth: "80vw"}}>
-            <VertPreview name="Game Jams" images={[["Puzzlegame.png", "Only 2% of people can beat this?!"], ["Root-rot.png", "Root Rot"], ["SnowyMansion_Better.png", "snowy mansion"]]} />
+            <VertPreview name="Game Jams" images={[["Puzzlegame.png", "Only 2% of people can beat this?!"], ["Root-rot.png", "Root Rot"], ["SnowyMansion.png", "snowy mansion"]]} />
             <VertPreview />
             <VertPreview />
             <VertPreview />
