@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "./static/css/main.6e112c27.css",
-    "main.js": "./static/js/main.f7700e70.js",
+    "main.css": "./static/css/main.73da5af6.css",
+    "main.js": "./static/js/main.dfc3cabc.js",
     "static/js/787.1ed0c42c.chunk.js": "./static/js/787.1ed0c42c.chunk.js",
     "static/media/Portrait.JPG": "./static/media/Portrait.427e12be943df9acf383.JPG",
-    "static/media/SnowyMansion_Better.png": "./static/media/SnowyMansion_Better.a4a4716aab368ce5737f.png",
+    "static/media/SnowyMansion.png": "./static/media/SnowyMansion.a4a4716aab368ce5737f.png",
     "static/media/SipOfLife.png": "./static/media/SipOfLife.b388b2e7e41e8333a2b3.png",
     "static/media/RobotRock.png": "./static/media/RobotRock.762f75cb9e8db5170623.png",
     "index.html": "./index.html",
-    "main.6e112c27.css.map": "./static/css/main.6e112c27.css.map",
-    "main.f7700e70.js.map": "./static/js/main.f7700e70.js.map",
+    "main.73da5af6.css.map": "./static/css/main.73da5af6.css.map",
+    "main.dfc3cabc.js.map": "./static/js/main.dfc3cabc.js.map",
     "787.1ed0c42c.chunk.js.map": "./static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e112c27.css",
-    "static/js/main.f7700e70.js"
+    "static/css/main.73da5af6.css",
+    "static/js/main.dfc3cabc.js"
   ]
 }
