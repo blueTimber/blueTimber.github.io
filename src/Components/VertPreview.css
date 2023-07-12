@@ -23,6 +23,8 @@
 
     position: absolute;
     overflow: clip;
+
+    cursor: pointer;
 }
 
 .project:hover {

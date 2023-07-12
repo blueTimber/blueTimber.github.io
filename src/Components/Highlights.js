@@ -1,4 +1,5 @@
 import './Highlights.css';
+import React, { useEffect } from 'react';
 
 function high_clicked_left(id) {
     const high_doc = document.getElementById(id);
@@ -28,14 +29,28 @@ function high_clicked_right(id) {
 
 
 function SingleHighlight(image, name, disc, images, zindex, scale, horoffset, veroffset, left) {
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            high_clicked_right(name);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
     const cycler = (
         <div id={name} className='image-cycler'>
-            <div className='img-left2' style={{ backgroundImage: `url('media/${images[1]}')` }} ></div>
-            <div className='img-left1' style={{ backgroundImage: `url('media/${images[2]}')` }}></div>
-            <div className='img-left' style={{ backgroundImage: `url('media/${images[0]}')` }}></div>
-            <div className='img-centre' style={{ backgroundImage: `url('media/${images[1]}')` }}></div>
-            <div className='img-right' style={{ backgroundImage: `url('media/${images[2]}')` }}></div>
-            <div className='img-right1' style={{ backgroundImage: `url('media/${images[0]}')` }}></div>
+            <div className='img-left2' style={{ backgroundImage: `url('media/${images[1]}')` }} >
+            </div>
+            <div className='img-left1' style={{ backgroundImage: `url('media/${images[2]}')` }}>
+            </div>
+            <div className='img-left' style={{ backgroundImage: `url('media/${images[0]}')` }}>
+            </div>
+            <div className='img-centre' style={{ backgroundImage: `url('media/${images[1]}')` }}>
+            </div>
+            <div className='img-right' style={{ backgroundImage: `url('media/${images[2]}')` }}>
+            </div>
+            <div className='img-right1' style={{ backgroundImage: `url('media/${images[0]}')` }}>
+            </div>
             <div className='left-hitbox' onMouseOver={() => high_clicked_left(name)}></div>
             <div className='right-hitbox' onMouseOver={() => high_clicked_right(name)}></div>
         </div>
@@ -84,7 +99,10 @@ function SingleHighlight(image, name, disc, images, zindex, scale, horoffset, ve
 function Highlights(props) {
     return (
         <div className='high-cont'>
-            {SingleHighlight("Root-rot.png", "Game Jams", "Test description", ["Puzzlegame.png", "Root-rot.png", "SipOfLife.png"], -100, "140vw", "-20vw", "0vw", false)}
+            {SingleHighlight("Root-rot.png", "Game Jams", 
+                "I've participated in muliple game jams, which taught me how to work in a team and perform under pressure. My roles in these games varied from gameplay programmer, to technical artist, to 3D artist.", 
+                ["Puzzlegame.png", "Root-rot.png", "SipOfLife.png"], -100, "140vw", "-20vw", "0vw", false
+                )}
             {SingleHighlight("SnowyMansion.png", "Blender", "", ["FieldMeeting.png", "SnowyMansion.png", "BoatPainting.png"], -110, "140vw", "20vw", "-13vw", true)}
             {SingleHighlight("Peasant.png", "Unfinished Games", "", ["Root-rot.png", "Peasant.png", "Peasant.png"], -120, "140vw", "20vw", "-1vw", false)}
         </div>

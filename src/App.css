@@ -5,6 +5,10 @@ html, body {
   --dark-color: #222222;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 100%;
   overflow-x: clip;
@@ -197,8 +201,42 @@ p.subtitle {
 
 .highlight-browser {
   height: 10vmax;
-  width: 30vmax;
+  width: 29vmax;
+
+  position: relative;
+
+  gap: 1vmax;
+  overflow: clip;
 }
+
+[class^="highlight-browser-cont"] {
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  gap: 1vmax;
+
+  position: absolute;
+  top: 0.5vmax;
+  bottom: 0.5vmax;
+
+  transition: all 0.5s;
+}
+
+.highlight-browser-cont1 {
+  left: 0vmax;
+}
+.highlight-browser-cont2 {
+  left: -10vmax;
+}
+.highlight-browser-cont3 {
+  left: -20vmax;
+}
+
 
 /* socials */
 .socials {
@@ -242,4 +280,34 @@ div.sticky {
   font-size: 25px;
 
   z-index: 200;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-text {
+  color: white;
+  cursor: pointer;
+
+  margin: 0.5vmax;
+  font-size: 30px;
+  font-weight: 500;
+
+  transition: all 0.5s;
+}
+.header-text:hover {
+  text-decoration: underline;
+}
+
+.bottombar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--dark-color);
+}
+
+.bottombar > p {
+  color: #cdcdcd;
+  font-weight: 500;
 }

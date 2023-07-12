@@ -1,0 +1,22 @@
+.collage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 5px;
+}
+
+.square {
+    width: 23vmax;
+    height: 23vmax;
+}
+
+.landscape {
+    height: 23vmax;
+    width: 47vmax;
+}
+
+.portrait {
+    height: 47vmax;
+    width: 23vmax;
+}
