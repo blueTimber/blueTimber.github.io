@@ -1,6 +1,6 @@
 .project {
-    height: 20vmax;
-    width: 20vmax;
+    height: 19vmax;
+    width: 19vmax;
 
     transition: height 0.5s;
     -webkit-transition: height 0.5s;
@@ -26,10 +26,6 @@
 
     cursor: pointer;
 }
-
-.project:hover {
-    z-index: 100;
-}
   
 .project-inner:hover {
     max-height: 100vmax;
@@ -38,7 +34,6 @@
 .proj-img-cont {
     width: 15vmax;
     
-
     margin-left: auto;
     margin-right: auto;
 }
@@ -58,17 +53,17 @@
     color: white;
 
     margin-top: 0;
-    margin-bottom: 2vmax;
-    font-size: 0.9vmax;
+    margin-bottom: 1.2vmax;
+    font-size: 0.7vmax;
     font-weight: 500;
 }
 
 .proj-img-cont > p {
     color: white;
 
-    margin-top: 0.8vmax;
+    margin-top: 0.5vmax;
     margin-bottom: 0;
-    font-size: 1.5vmax;
+    font-size: 0.9vmax;
     font-weight: 500;
 }
   

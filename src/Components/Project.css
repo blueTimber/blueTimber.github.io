@@ -1,14 +1,14 @@
 .project-highlight {
-    height: 8vmax;
-    width: 8vmax;
-    min-width: 8vmax;
+    height: 8.6vmax;
+    width: 8.6vmax;
+    min-width: 8.6vmax;
 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
     border-color: var(--dark-color);
-    border-width: 0.5vmax;
+    border-width: 0.2vmax;
     border-radius: 20px;
     border-style: solid;
 

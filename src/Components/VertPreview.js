@@ -15,7 +15,7 @@ function VertPreview(props) {
     }
 
     return (
-        <div className="project">
+        <div style={{zIndex: `${props.zindex}`}} className="project">
             <div className="project-inner">
                 <div className='proj-img-cont'>
                     <p>{props.name}</p>
