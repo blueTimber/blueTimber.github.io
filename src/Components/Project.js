@@ -21,9 +21,9 @@ export function MoveRight() {
 
 function Project(props) {
     return (
-        <div className="project-highlight" style={{backgroundImage: `url('media/${props.image}')`}}>
+        <a href={props.link} target="_blank" rel="noopener noreferrer" className="project-highlight" style={{backgroundImage: `url('media/${props.image}')`}}>
             <p className='project-highlight-name'>{props.name}</p>
-        </div>
+        </a>
     );
 }
   

@@ -1,10 +1,8 @@
 .project {
-    height: 19vmax;
-    width: 19vmax;
+    height: calc(100% - 1.5vmax);
+    width: 100%;
 
-    transition: height 0.5s;
-    -webkit-transition: height 0.5s;
-    transition: 0.5s;
+    transition: all 0.5s;
 
     position:relative; 
     z-index:0;
@@ -15,16 +13,15 @@
     width: 100%;
 
     background-color: #272727;
-    border-radius: 0.5vmax;
+    border-radius: 0.3vmax;
+    padding-bottom: 1.5vmax;
 
-    transition: max-height 0.5s;
-    -webkit-transition: max-height 0.5s;
-    transition: 0.5s;
+    transition: all 0.5s;
 
     position: absolute;
-    overflow: clip;
 
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
   
 .project-inner:hover {
@@ -46,19 +43,28 @@
     background-position: center;
   
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1vmax;
+
+    border-radius: 5px;
+
+    position: relative;
+    box-shadow: inset 0px -30px 50px 0px #0000008f;
 }
 
-.proj-img-cont > div > p {
+.proj-img-cont > div > div > p {
     color: white;
 
     margin-top: 0;
-    margin-bottom: 1.2vmax;
+    margin-bottom: 0;
     font-size: 0.7vmax;
     font-weight: 500;
+
+    position: absolute;
+    left: 0.3vmax;
+    bottom: 0.3vmax;
 }
 
-.proj-img-cont > p {
+.proj-title {
     color: white;
 
     margin-top: 0.5vmax;
@@ -66,4 +72,25 @@
     font-size: 0.9vmax;
     font-weight: 500;
 }
-  
+
+.proj-subtitle {
+    color: white;
+    font-size: 0.6vmax;
+    font-weight: 500;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a:-webkit-any-link{
+    text-decoration:none !important;
+}
+
+.fa-chevron-down {
+    color: #5f5f5f;;
+    height: fit-content;
+    font-size: 1.7vmax;
+
+    position: absolute;
+    bottom: 0.2vmax;
+}

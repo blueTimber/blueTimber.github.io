@@ -5,23 +5,31 @@ function VertPreview(props) {
     if (props.images != null) {
         elements = props.images.map(i =>{
             return (
-                <div key={i[1]}>
-                    <div style={{backgroundImage: `url('media/${i[0]}')`}}></div>
-                    <p>{i[1]}</p>
+                <div key={props.images.indexOf(i)}>
+                    <div style={{
+                        backgroundImage: `url('media/${i[0]}')`,
+                        backgroundSize: `${i[2]} auto`,
+                        backgroundPosition: `calc(50% + ${i[3]}) calc(50% + ${i[4]})`
+                    }}>
+                        <p>{i[1]}</p>
+                    </div>
                 </div>
             )
-        }
-        )
+        })
     }
 
     return (
         <div style={{zIndex: `${props.zindex}`}} className="project">
-            <div className="project-inner">
-                <div className='proj-img-cont'>
-                    <p>{props.name}</p>
-                    {elements}
+            <a href={props.link} target="_blank" rel="noopener noreferrer" className="project-inner">
+                <div style={{maxWidth: "100%", maxHeight: "100%", overflow: "clip"}}>
+                    <div className='proj-img-cont'>
+                        <p className='proj-title'>{props.name}</p>
+                        <p className='proj-subtitle'>{props.subtitle}</p>
+                        {elements}
+                    </div>
                 </div>
-            </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
         </div>
     );
 }

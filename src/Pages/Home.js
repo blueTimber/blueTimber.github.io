@@ -42,11 +42,11 @@ function Home() {
               <div className="highlight-select" onClick={() => MoveLeft()}><i className="fa-solid fa-chevron-left"></i></div>
               <div className="highlight-browser">
                 <div className='highlight-browser-cont1'>
-                  <Project name="Only 2% of People Can Finish This?!" image="Puzzlegame.png" />
-                  <Project name="Root Rot" image="Root-rot.png" />
-                  <Project name="Snowy Mansion" image="SnowyMansion.png" />
-                  <Project name="The Sip of Life" image="SipOfLife.png" />
-                  <Project name="The Meeting" image="FieldMeeting.png" />
+                  <Project name="Only 2% of People Can Finish This?!" image="Puzzlegame.png" link="https://zeyt8.itch.io/chalk-and-cheese" />
+                  <Project name="Root Rot" image="Root-rot.png" link="https://zeyt8.itch.io/root-rot" />
+                  <Project name="Snowy Mansion" image="SnowyMansion.png" link="https://www.instagram.com/p/Cswoc_lqu7b/" />
+                  <Project name="The Sip of Life" image="SipOfLife.png" link="https://zeyt8.itch.io/the-sip-of-life" />
+                  <Project name="The Meeting" image="FieldMeeting.png" link="https://www.instagram.com/p/Cgwxn2UKb9E/" />
                 </div>
               </div>
               <div className="highlight-select" onClick={() => MoveRight()}><i className="fa-solid fa-chevron-right"></i></div>
@@ -63,36 +63,51 @@ function Home() {
           <p className='header-text' onClick={() => document.getElementsByClassName('bottombar')[0].scrollIntoView()}>Contact</p>
         </div>
         <div className='summary'><Highlights /></div>
-        <div className='games' style={{height: "125vh"}}>
+        <div className='games' style={{height: "fit-content"}}>
           <p className="header">Games</p>
-          <div style={{display: "grid", gridTemplateColumns: "repeat(3, 19vmax)", gridTemplateRows: "repeat(3, 19vmax)", gridGap: "1vmax", marginLeft: "calc((100vw - 59vmax)/2)", marginBottom: "10vmax"}}>
-            <VertPreview zindex={10} name="Only 2% of People Can Finish This?!" images={[
-                ["Puzzlegame.png", "I was the 3D artist for this game made in 2.5 days for the 'Thinky Puzzle Game Jam 3'."], 
-                ["puzzlegame/Circle.png", "Root Rot"], 
-                ["puzzlegame/Bomb.png", "snowy mansion"]
+          <div style={{display: "grid", gridTemplateColumns: "repeat(3, 18vmax)", gridTemplateRows: "repeat(3, 19.5vmax)", gridGap: "1vmax", marginLeft: "calc((100vw - 56vmax)/2)", marginBottom: "10vmax"}}>
+            <VertPreview zindex={10} name="Only 2% of People Can Finish This?!" subtitle="Thinky Puzzle Game Jam 3 (2023)" images={[
+              ["Puzzlegame.png", "Role: 3D Artist/Technical Artist"], 
+              ["puzzlegame/Circle.png", "Root Rot"], 
+              ["puzzlegame/Bomb.png", "snowy mansion"]
+            ]} link="https://zeyt8.itch.io/chalk-and-cheese" />
+            <VertPreview zindex={9} name="Root Rot" subtitle="GGJ-2023" images={[
+              ["Root-rot.png", "Role: Gameplay Programmer/Technical Artist"],
+              ["rootrot/rootrot2.png", "TODO"],
+              ["rootrot/rootrot3.png", "TODO2", "cover", "-3vw", "0vw"]
+            ]} link="https://zeyt8.itch.io/root-rot" />
+            <VertPreview zindex={8} name="The Sip of Life" subtitle="Tales of Us Game Jam (2022)" images={[
+              ["SipOfLife.png", "Role: Technical Artist/Level Designer"],
+              ["sipoflife/sipoflife2.png", "Small improvemeents were made over the course of a few days afterwards."],
+              ["sipoflife/sipoflife3.png", "Small improvemeents were made over the course of a few days afterwards."]
+            ]} link="https://zeyt8.itch.io/the-sip-of-life" />
+            <VertPreview zindex={7} name="Elf-Employment" subtitle="Xmas IXD/GDT Game Jam 22'" images={[
+              ["elf/Covergif.gif", "Role: 3D Artist"],
+              ["elf/elf2.png", "Role: 3D Artist"],
+              ["elf/elf3.png", "Role: 3D Artist"]
+            ]} link="https://nightanimal333.itch.io/elf-employment" />
+            <VertPreview zindex={6} name="Snails in Peril" subtitle="Week Sauce Game Jam (Apr 2022)" images={[
+              ["snails/snails3.png", "Role: 3D Artist"],
+              ["snails/snails1.png", "Role: 3D Artist"],
+              ["snails/snails2.png", "Role: 3D Artist"]
+            ]} link="https://zeyt8.itch.io/snails-in-peril" />
+            <VertPreview zindex={5} name="Unitiled Peasant Game" subtitle="Cancelled PC Game (2021)" images={[
+              ["Peasant.png", "Role: 3D Artist/Technical Artist", "cover", "5vw", "0vw"],
+              ["peasant/PeasantModels.png", ""],
+              ["peasant/Peasant2.png", ""],
+              ["peasant/Peasant3.png", "", "cover", "4vw", "0vw"]
             ]} />
-            <VertPreview zindex={9} name="Root Rot" images={[
-                ["Root-rot.png", "I was the gameplay programmer and technical artist for 'Root Rot' made for GGJ2023."],
-                ["rootrot/rootrot2.png", "TODO"],
-                ["rootrot/rootrot3.png", "TODO2"]
+            <VertPreview zindex={4} name="WingJam" subtitle="Unfinished Mobile Game (2021)" images={[
+              ["wingjam/wingjam1.gif", "Solo Project"],
+              ["wingjam/wingjam2.gif", "Solo Project"],
+              ["wingjam/wingjam3.gif", "Solo Project"],
+              ["wingjam/wingjam4.gif", "Solo Project"]
             ]} />
-            <VertPreview zindex={8} name="The Sip of Life" images={[
-                ["SipOfLife.png", "This game was made for a 48-hour game jam, with me as the technical artist/level designer."]
-            ]}/>
-            <VertPreview zindex={7} name="Snails in Peril" images={[
-                ["snails/snails1.png", "'Snails in Peril' was made in a week, and I made almost all models and animations."]
-            ]}/>
-            <VertPreview zindex={6} name="Elf-Employment" images={[
-                ["elf/elf1.png", "'Elf-Employment' was made for a 48-hour christmas game jam. I made the models."]
-            ]} />
-            <VertPreview zindex={5} name="WingJam" images={[
-
-            ]} />
-            <VertPreview zindex={4} name="FPS Movement Controller" images={[
-                
-            ]} />
-            <VertPreview zindex={3} name="Unitiled Peasant Game" images={[
-                
+            <VertPreview zindex={3} name="FPS Movement Controller" subtitle="Gameplay Prototype (2020)" images={[
+                ["fps/Fps1.gif", "Solo Project"],
+                ["fps/Fps2.gif", "Solo Project"],
+                ["fps/Fps3.gif", "Solo Project"],
+                ["fps/Fps4.gif", "Solo Project"]
             ]} />
           </div>
         </div>
@@ -111,7 +126,7 @@ function Home() {
             <Landscape image="FieldMeeting.png" column={2} row={6} />
             <Landscape image="art/TopDownFlareGun.png" column={1} row={7} />
             <Portrait image="art/PillarSnake.png" column={3} row={7} />
-            <Square image="art/MoonLantern.png" column={1} row={8} />
+            <Square image="art/Moonlantern.png" column={1} row={8} />
             <Square image="art/Propellor.png" column={2} row={8} />
             <Landscape image="BoatPainting.png" column={1} row={9} />
           </div>

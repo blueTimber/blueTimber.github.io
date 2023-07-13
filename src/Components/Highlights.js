@@ -39,18 +39,24 @@ function SingleHighlight(image, name, disc, images, zindex, scale, horoffset, ve
 
     const cycler = (
         <div id={name} className='image-cycler'>
-            <div className='img-left2' style={{ backgroundImage: `url('media/${images[1]}')` }} >
-            </div>
-            <div className='img-left1' style={{ backgroundImage: `url('media/${images[2]}')` }}>
-            </div>
-            <div className='img-left' style={{ backgroundImage: `url('media/${images[0]}')` }}>
-            </div>
-            <div className='img-centre' style={{ backgroundImage: `url('media/${images[1]}')` }}>
-            </div>
-            <div className='img-right' style={{ backgroundImage: `url('media/${images[2]}')` }}>
-            </div>
-            <div className='img-right1' style={{ backgroundImage: `url('media/${images[0]}')` }}>
-            </div>
+            <a className='img-left2' style={{ backgroundImage: `url('media/${images[1][0]}')` }} 
+                href={images[1][1]} target="_blank" rel="noopener noreferrer">
+            </a>
+            <a className='img-left1' style={{ backgroundImage: `url('media/${images[2][0]}')` }}
+                href={images[2][1]} target="_blank" rel="noopener noreferrer">
+            </a>
+            <a className='img-left' style={{ backgroundImage: `url('media/${images[0][0]}')` }}
+                href={images[0][1]} target="_blank" rel="noopener noreferrer">
+            </a>
+            <a className='img-centre' style={{ backgroundImage: `url('media/${images[1][0]}')` }}
+                href={images[1][1]} target="_blank" rel="noopener noreferrer">
+            </a>
+            <a className='img-right' style={{ backgroundImage: `url('media/${images[2][0]}')` }}
+                href={images[2][1]} target="_blank" rel="noopener noreferrer">
+            </a>
+            <a className='img-right1' style={{ backgroundImage: `url('media/${images[0][0]}')` }}
+                href={images[0][1]} target="_blank" rel="noopener noreferrer">
+            </a>
             <div className='left-hitbox' onMouseOver={() => high_clicked_left(name)}></div>
             <div className='right-hitbox' onMouseOver={() => high_clicked_right(name)}></div>
         </div>
@@ -101,10 +107,22 @@ function Highlights(props) {
         <div className='high-cont'>
             {SingleHighlight("Root-rot.png", "Game Jams", 
                 "I've participated in muliple game jams, which taught me how to work in a team and perform under pressure. My roles in these games varied from gameplay programmer, to technical artist, to 3D artist.", 
-                ["Puzzlegame.png", "Root-rot.png", "SipOfLife.png"], -100, "140vw", "-20vw", "0vw", false
+                [["Puzzlegame.png", "https://zeyt8.itch.io/chalk-and-cheese"], 
+                ["Root-rot.png", "https://zeyt8.itch.io/root-rot"], 
+                ["SipOfLife.png", "https://zeyt8.itch.io/the-sip-of-life"]], 
+                -100, "140vw", "-20vw", "0vw", false
                 )}
-            {SingleHighlight("SnowyMansion.png", "Blender", "", ["FieldMeeting.png", "SnowyMansion.png", "BoatPainting.png"], -110, "140vw", "20vw", "-13vw", true)}
-            {SingleHighlight("Peasant.png", "Unfinished Games", "", ["Root-rot.png", "Peasant.png", "Peasant.png"], -120, "140vw", "20vw", "-1vw", false)}
+            {SingleHighlight("SnowyMansion.png", "Blender", 
+            "In 2019 I often faced the problem of not having an artist, so I decided to try and learn Blender. This quickly spiraled into a new hobby and I've been making 3D art for 4 years now.", 
+            [["FieldMeeting.png", "https://www.instagram.com/p/Cgwxn2UKb9E/"], 
+            ["SnowyMansion.png", "https://www.instagram.com/p/Cswoc_lqu7b/"], 
+            ["BoatPainting.png", "https://www.instagram.com/p/CN0kGW-DftH/"]], 
+            -110, "140vw", "20vw", "-13vw", true)}
+            {SingleHighlight("Peasant.png", "Unfinished Games", 
+            "I have worked on multiple games that were either never meant to be finished or abondoned. However, I think a couple are still worth showing.", 
+            [["Wingjam.png"], 
+            ["Peasant.png"], ["Fps.png"]], 
+            -120, "140vw", "20vw", "-1vw", false)}
         </div>
     );
 }
