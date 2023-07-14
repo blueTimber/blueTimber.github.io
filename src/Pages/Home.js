@@ -68,46 +68,46 @@ function Home() {
           <div style={{display: "grid", gridTemplateColumns: "repeat(3, 18vmax)", gridTemplateRows: "repeat(3, 19.5vmax)", gridGap: "1vmax", marginLeft: "calc((100vw - 56vmax)/2)", marginBottom: "10vmax"}}>
             <VertPreview zindex={10} name="Only 2% of People Can Finish This?!" subtitle="Thinky Puzzle Game Jam 3 (2023)" images={[
               ["Puzzlegame.png", "Role: 3D Artist/Technical Artist"], 
-              ["puzzlegame/Circle.png", "Root Rot"], 
-              ["puzzlegame/Bomb.png", "snowy mansion"]
+              ["puzzlegame/Circle.png", "A seemingly innocent and simple puzzle game that quickly spirals out of control."], 
+              ["puzzlegame/Bomb.png", "I made this game with 3 other people. I was responsible for the 3D models and (procedural) animations."]
             ]} link="https://zeyt8.itch.io/chalk-and-cheese" />
             <VertPreview zindex={9} name="Root Rot" subtitle="GGJ-2023" images={[
               ["Root-rot.png", "Role: Gameplay Programmer/Technical Artist"],
-              ["rootrot/rootrot2.png", "TODO"],
-              ["rootrot/rootrot3.png", "TODO2", "cover", "-3vw", "0vw"]
+              ["rootrot/rootrot2.png", "Control a bush and climb/swing through the level (and your enemies) with your roots."],
+              ["rootrot/rootrot3.png", "In our group of 3, I made the physics-based movement system for the player, and the procedural mesh generation for its roots.", "cover", "-3vw", "0vw"]
             ]} link="https://zeyt8.itch.io/root-rot" />
             <VertPreview zindex={8} name="The Sip of Life" subtitle="Tales of Us Game Jam (2022)" images={[
               ["SipOfLife.png", "Role: Technical Artist/Level Designer"],
-              ["sipoflife/sipoflife2.png", "Small improvemeents were made over the course of a few days afterwards."],
-              ["sipoflife/sipoflife3.png", "Small improvemeents were made over the course of a few days afterwards."]
+              ["sipoflife/sipoflife2.png", "Control the son of Alexander The Great and punch your way through monsters and fairies, to reach the fountain of youth in this retro-themed Beat 'em up."],
+              ["sipoflife/sipoflife3.png", "We made this game with 4 people, and my responsibility was the shaders and FX, as well as level design."]
             ]} link="https://zeyt8.itch.io/the-sip-of-life" />
             <VertPreview zindex={7} name="Elf-Employment" subtitle="Xmas IXD/GDT Game Jam 22'" images={[
               ["elf/Covergif.gif", "Role: 3D Artist"],
-              ["elf/elf2.png", "Role: 3D Artist"],
-              ["elf/elf3.png", "Role: 3D Artist"]
+              ["elf/elf2.png", "Slowly form a woker's union by convincing your fellow elves, ultimately confronting Santa himself."],
+              ["elf/elf3.png", "I made this game with one other person, with me being responsible for the models and animations. This game was the first and only game I've made in Godot, which led to issues during development."]
             ]} link="https://nightanimal333.itch.io/elf-employment" />
             <VertPreview zindex={6} name="Snails in Peril" subtitle="Week Sauce Game Jam (Apr 2022)" images={[
               ["snails/snails3.png", "Role: 3D Artist"],
-              ["snails/snails1.png", "Role: 3D Artist"],
-              ["snails/snails2.png", "Role: 3D Artist"]
+              ["snails/snails1.png", "Control two snails and sneak/puzzle-solve your way past evil snails to escape."],
+              ["snails/snails2.png", "This was my first game jam, and my first game in Unreal Engine. This was made with a team of 3 with me making the 3D models and animations."]
             ]} link="https://zeyt8.itch.io/snails-in-peril" />
             <VertPreview zindex={5} name="Unitiled Peasant Game" subtitle="Cancelled PC Game (2021)" images={[
               ["Peasant.png", "Role: 3D Artist/Technical Artist", "cover", "5vw", "0vw"],
-              ["peasant/PeasantModels.png", ""],
-              ["peasant/Peasant2.png", ""],
-              ["peasant/Peasant3.png", "", "cover", "4vw", "0vw"]
+              ["peasant/peasantModels.png", "This was my first team project, with a group of 3; a game about medieval peasants fighting through a dungeon."],
+              ["peasant/peasant2.png", "Before cancellation I completed multiple models and animations, as well as stylised shaders."],
+              ["peasant/peasant3.png", "This game was cancelled in favour of working on a different game with a bigger team, which is currently in development.", "cover", "4vw", "0vw"]
             ]} />
             <VertPreview zindex={4} name="WingJam" subtitle="Unfinished Mobile Game (2021)" images={[
               ["wingjam/wingjam1.gif", "Solo Project"],
-              ["wingjam/wingjam2.gif", "Solo Project"],
-              ["wingjam/wingjam3.gif", "Solo Project"],
-              ["wingjam/wingjam4.gif", "Solo Project"]
+              ["wingjam/wingjam2.gif", "A mobile game with procedural tile-based level generation. In the end, two enemies and two bosses were completed."],
+              ["wingjam/wingjam3.gif", "I spend a lot of development time on optimisation, getting the game to run on a stable 60fps(my phone's max framerate) on my 5 year old budget phone(MI A2)."],
+              ["wingjam/wingjam4.gif", "I stopped developing this game when I met other Unity developers to team up with."]
             ]} />
-            <VertPreview zindex={3} name="FPS Movement Controller" subtitle="Gameplay Prototype (2020)" images={[
+            <VertPreview zindex={3} name="FPS Movement Controller" subtitle="Gameplay Prototype (2019-2020)" images={[
                 ["fps/Fps1.gif", "Solo Project"],
-                ["fps/Fps2.gif", "Solo Project"],
-                ["fps/Fps3.gif", "Solo Project"],
-                ["fps/Fps4.gif", "Solo Project"]
+                ["fps/Fps2.gif", "Before I tried to make full games I spent most of my time on prototyping mechanics. The main one worth showing off is a Titanfall-inspired physics-based movement controller."],
+                ["fps/Fps3.gif", "A lot of time was spend making it feel as smooth as possible and adding as many movement options as possible."],
+                ["fps/Fps4.gif", "I also added a gravity manipulation ability, as well as zero-gravity movement, and a grappling hook(of course)."]
             ]} />
           </div>
         </div>

@@ -113,7 +113,7 @@ function Highlights(props) {
                 -100, "140vw", "-20vw", "0vw", false
                 )}
             {SingleHighlight("SnowyMansion.png", "Blender", 
-            "In 2019 I often faced the problem of not having an artist, so I decided to try and learn Blender. This quickly spiraled into a new hobby and I've been making 3D art for 4 years now.", 
+            "In 2019 I often faced the problem of not having an artist, so I decided to try and learn Blender. This quickly spiraled into a new hobby and I've been making 3D art for over 4 years now.", 
             [["FieldMeeting.png", "https://www.instagram.com/p/Cgwxn2UKb9E/"], 
             ["SnowyMansion.png", "https://www.instagram.com/p/Cswoc_lqu7b/"], 
             ["BoatPainting.png", "https://www.instagram.com/p/CN0kGW-DftH/"]], 
