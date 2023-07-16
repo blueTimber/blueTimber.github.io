@@ -69,6 +69,8 @@
     color:white;
     max-width: 30vw;
     font-size: 1.3vmax;
+
+    text-shadow: 0 0 20px black;
 }
 
 .image-cycler {
