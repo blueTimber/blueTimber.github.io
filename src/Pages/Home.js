@@ -42,11 +42,11 @@ function Home() {
               <div className="highlight-select" onClick={() => MoveLeft()}><i className="fa-solid fa-chevron-left"></i></div>
               <div className="highlight-browser">
                 <div className='highlight-browser-cont1'>
+                  <Project name="DOUBLE DOUBLE" image="doubledouble/Screenshot1.png" link="https://bluetimber.itch.io/double-double" />
                   <Project name="Only 2% of People Can Finish This?!" image="Puzzlegame.png" link="https://zeyt8.itch.io/chalk-and-cheese" />
                   <Project name="Root Rot" image="Root-rot.png" link="https://zeyt8.itch.io/root-rot" />
                   <Project name="Snowy Mansion" image="SnowyMansion.png" link="https://www.instagram.com/p/Cswoc_lqu7b/" />
                   <Project name="The Sip of Life" image="SipOfLife.png" link="https://zeyt8.itch.io/the-sip-of-life" />
-                  <Project name="The Meeting" image="FieldMeeting.png" link="https://www.instagram.com/p/Cgwxn2UKb9E/" />
                 </div>
               </div>
               <div className="highlight-select" onClick={() => MoveRight()}><i className="fa-solid fa-chevron-right"></i></div>
@@ -66,6 +66,12 @@ function Home() {
         <div className='games' style={{height: "fit-content"}}>
           <p className="header">Games</p>
           <div style={{display: "grid", gridTemplateColumns: "repeat(3, 18vmax)", gridTemplateRows: "repeat(3, 19.5vmax)", gridGap: "1vmax", marginLeft: "calc((100vw - 56vmax)/2)", marginBottom: "10vmax"}}>
+            <VertPreview zindex={10} name="DOUBLE DOUBLE" subtitle="Bucharest Summer Game Jam (2023)" images={[
+              ["doubledouble/Gif1.gif", "Solo Project"], 
+              ["doubledouble/Screenshot3.png", "You are trapped, all you have is a monitor and a game. Good luck!"], 
+              ["doubledouble/Screenshot4.png", "Solve the puzzles on the monitors around you to open the doors and escape."], 
+              ["doubledouble/Screenshot5.png", "Completed in just 48 hours, without the use of assets."]
+            ]} link="https://bluetimber.itch.io/double-double" />
             <VertPreview zindex={10} name="Only 2% of People Can Finish This?!" subtitle="Thinky Puzzle Game Jam 3 (2023)" images={[
               ["Puzzlegame.png", "Role: 3D Artist/Technical Artist"], 
               ["puzzlegame/Circle.png", "A seemingly innocent and simple puzzle game that quickly spirals out of control."], 

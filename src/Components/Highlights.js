@@ -107,7 +107,7 @@ function Highlights(props) {
         <div className='high-cont'>
             {SingleHighlight("Root-rot.png", "Game Jams", 
                 "I've participated in multiple game jams, which taught me how to work in a team and perform under pressure. My roles in these games varied from gameplay programmer, to technical artist, to 3D artist.", 
-                [["Puzzlegame.png", "https://zeyt8.itch.io/chalk-and-cheese"], 
+                [["doubledouble/Screenshot1.png", "https://bluetimber.itch.io/double-double"], 
                 ["Root-rot.png", "https://zeyt8.itch.io/root-rot"], 
                 ["SipOfLife.png", "https://zeyt8.itch.io/the-sip-of-life"]], 
                 -100, "140vw", "-20vw", "0vw", false
