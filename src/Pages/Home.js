@@ -89,7 +89,7 @@ function Home() {
             ]} link="https://zeyt8.itch.io/the-sip-of-life" />
             <VertPreview zindex={7} name="Elf-Employment" subtitle="Xmas IXD/GDT Game Jam 22'" images={[
               ["elf/Covergif.gif", "Role: 3D Artist"],
-              ["elf/elf2.png", "Slowly form a woker's union by convincing your fellow elves, ultimately confronting Santa himself."],
+              ["elf/elf2.png", "Slowly form a worker's union by convincing your fellow elves, ultimately confronting Santa himself."],
               ["elf/elf3.png", "I made this game with one other person, with me being responsible for the models and animations. This game was the first and only game I've made in Godot, which led to issues during development."]
             ]} link="https://nightanimal333.itch.io/elf-employment" />
             <VertPreview zindex={6} name="Snails in Peril" subtitle="Week Sauce Game Jam (Apr 2022)" images={[
