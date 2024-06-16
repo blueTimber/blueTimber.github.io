@@ -39,7 +39,7 @@ function SingleHighlight(image, name, disc, images, zindex, scale, horoffset, ve
 
     const cycler = (
         <div id={name} className='image-cycler'>
-            <a className='img-left2' style={{ backgroundImage: `url('media/${images[1][0]}')` }} 
+            <a className='img-left2' style={{ backgroundImage: `url('media/${images[1][0]}')` }}
                 href={images[1][1]} target="_blank" rel="noopener noreferrer">
             </a>
             <a className='img-left1' style={{ backgroundImage: `url('media/${images[2][0]}')` }}
@@ -57,8 +57,8 @@ function SingleHighlight(image, name, disc, images, zindex, scale, horoffset, ve
             <a className='img-right1' style={{ backgroundImage: `url('media/${images[0][0]}')` }}
                 href={images[0][1]} target="_blank" rel="noopener noreferrer">
             </a>
-            <div className='left-hitbox' onMouseOver={() => high_clicked_left(name)}></div>
-            <div className='right-hitbox' onMouseOver={() => high_clicked_right(name)}></div>
+            <div className='left-hitbox'></div>
+            <div className='right-hitbox'></div>
         </div>
     );
 
@@ -88,14 +88,14 @@ function SingleHighlight(image, name, disc, images, zindex, scale, horoffset, ve
         );
     }
 
-    return(
+    return (
         <div className='highlight'>
             <div className='highlight-img' style={{
                 backgroundImage: `url('media/${image}')`,
                 zIndex: zindex,
                 backgroundSize: `${scale} auto`,
                 backgroundPosition: `calc(50% + ${horoffset}) calc(50% + ${veroffset})`
-                }}>
+            }}>
             </div>
             {high}
         </div>
@@ -105,26 +105,26 @@ function SingleHighlight(image, name, disc, images, zindex, scale, horoffset, ve
 function Highlights(props) {
     return (
         <div className='high-cont'>
-            {SingleHighlight("Root-rot.png", "Game Jams", 
-                "I've participated in multiple game jams, which taught me how to work in a team and perform under pressure. My roles in these games varied from gameplay programmer, to technical artist, to 3D artist.", 
-                [["doubledouble/Screenshot1.png", "https://bluetimber.itch.io/double-double"], 
-                ["Root-rot.png", "https://zeyt8.itch.io/root-rot"], 
-                ["SipOfLife.png", "https://zeyt8.itch.io/the-sip-of-life"]], 
+            {SingleHighlight("Root-rot.png", "Game Jams",
+                "I've participated in multiple game jams, which taught me how to work in a team and perform under pressure. My roles in these games varied from gameplay programmer, to technical artist, to 3D artist.",
+                [["doubledouble/Screenshot1.png", "https://bluetimber.itch.io/double-double"],
+                ["Root-rot.png", "https://zeyt8.itch.io/root-rot"],
+                ["SipOfLife.png", "https://zeyt8.itch.io/the-sip-of-life"]],
                 -100, "140vw", "-20vw", "0vw", false
-                )}
-            {SingleHighlight("SnowyMansion.png", "Blender", 
-            "In 2019 I often faced the problem of not having an artist, so I decided to try and learn Blender. This quickly spiraled into a new hobby and I've been making 3D art for over 4 years now.", 
-            [["FieldMeeting.png", "https://www.instagram.com/p/Cgwxn2UKb9E/"], 
-            ["SnowyMansion.png", "https://www.instagram.com/p/Cswoc_lqu7b/"], 
-            ["BoatPainting.png", "https://www.instagram.com/p/CN0kGW-DftH/"]], 
-            -110, "140vw", "20vw", "-13vw", true)}
-            {SingleHighlight("Peasant.png", "Unfinished Games", 
-            "I have worked on multiple games that were either never meant to be finished or abondoned. However, I think a couple are still worth showing.", 
-            [["Wingjam.png"], 
-            ["Peasant.png"], ["Fps.png"]], 
-            -120, "140vw", "20vw", "-1vw", false)}
+            )}
+            {SingleHighlight("SnowyMansion.png", "Blender",
+                "In 2019 I often faced the problem of not having an artist, so I decided to try and learn Blender. This quickly spiraled into a new hobby and I've been making 3D art for over 4 years now.",
+                [["FieldMeeting.png", "https://www.instagram.com/p/Cgwxn2UKb9E/"],
+                ["SnowyMansion.png", "https://www.instagram.com/p/Cswoc_lqu7b/"],
+                ["BoatPainting.png", "https://www.instagram.com/p/CN0kGW-DftH/"]],
+                -110, "140vw", "20vw", "-13vw", true)}
+            {SingleHighlight("Peasant.png", "Unfinished Games",
+                "I have worked on multiple games that were either never meant to be finished or abondoned. However, I think a couple are still worth showing.",
+                [["Wingjam.png"],
+                ["Peasant.png"], ["Fps.png"]],
+                -120, "140vw", "20vw", "-1vw", false)}
         </div>
     );
 }
-  
+
 export default Highlights;

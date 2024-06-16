@@ -3,7 +3,7 @@ import Highlights from '../Components/Highlights';
 import Project from '../Components/Project';
 import { MoveLeft, MoveRight } from '../Components/Project';
 import VertPreview from '../Components/VertPreview';
-import { Square, Landscape, Portrait} from '../Components/Collage';
+import { Square, Landscape, Portrait } from '../Components/Collage';
 import React, { useEffect } from 'react';
 
 function Home() {
@@ -16,29 +16,29 @@ function Home() {
 
   return (
     <div className="App">
-      <div style={{overflow: "clip",position: "relative"}}>
-        <div className="intro" style={{overflow: "hidden"}}>
+      <div style={{ overflow: "clip", position: "relative" }}>
+        <div className="intro" style={{ overflow: "hidden" }}>
           <span className="title">
             <p className="title">Jonte Herben</p>
             <p className="subtitle">Portfolio</p>
           </span>
           <div className="socials">
-            <a href="https://www.instagram.com/bluetimber_/"                target="_blank" rel="noopener noreferrer" className="fa-brands fa-instagram"></a>
-            <a href="https://bluetimber.itch.io/"                           target="_blank" rel="noopener noreferrer" className="fa-brands fa-itch-io"></a>
-            <a href="https://www.linkedin.com/in/jonte-herben-a08b1523b/"   target="_blank" rel="noopener noreferrer" className="fa-brands fa-linkedin-in"></a>
+            <a href="https://www.instagram.com/bluetimber_/" target="_blank" rel="noopener noreferrer" className="fa-brands fa-instagram"></a>
+            <a href="https://bluetimber.itch.io/" target="_blank" rel="noopener noreferrer" className="fa-brands fa-itch-io"></a>
+            <a href="https://www.linkedin.com/in/jonte-herben-a08b1523b/" target="_blank" rel="noopener noreferrer" className="fa-brands fa-linkedin-in"></a>
           </div>
           <div id="about">
             <div id="protrait"></div>
             <div className="faded">
-              <p style={{margin: "0", fontSize: "1.2vmax", fontWeight: "400", color: "#a0a0a0", textAlign: "right"}}>
-                  'Sup! I'm Jonte Herben, and I'm 20 years old and have just completed my Computer Science & Engineering bachelor at TU Delft. 
-                  I'm also a hobbyist game-dev and 3D artist for well over 5 years now.
+              <p style={{ margin: "0", fontSize: "1.2vmax", fontWeight: "400", color: "#a0a0a0", textAlign: "right" }}>
+                'Sup! I'm Jonte Herben, and I'm 21 years old and have just completed my Computer Science & Engineering bachelor at TU Delft.
+                I'm also a hobbyist game-dev and 3D artist for well over 5 years now.
               </p>
             </div>
           </div>
           <div className="highlights">
-            <p style={{color: "white", fontWeight: "600", margin: "0 0 0 0.5vmax"}}>Highlighted projects</p>
-            <div style={{display: "flex", marginTop: "0.2vmax", marginBottom: "0.2vmax", borderRadius: "0.5vmax", backgroundColor: "#1b1b1b"}}>
+            <p style={{ color: "white", fontWeight: "600", margin: "0 0 0 0.5vmax" }}>Highlighted projects</p>
+            <div style={{ display: "flex", marginTop: "0.2vmax", marginBottom: "0.2vmax", borderRadius: "0.5vmax", backgroundColor: "#1b1b1b" }}>
               <div className="highlight-select" onClick={() => MoveLeft()}><i className="fa-solid fa-chevron-left"></i></div>
               <div className="highlight-browser">
                 <div className='highlight-browser-cont1'>
@@ -53,7 +53,7 @@ function Home() {
             </div>
           </div>
           <div className="scroll-reminder">
-              <p style={{color: "white", textAlign: "center", fontWeight: "bold", fontSize: "1vmax", lineHeight: "1", margin: "0.5vmax 0.5vmax 1vmax 0.5vmax"}}>Scroll for more!</p>
+            <p style={{ color: "white", textAlign: "center", fontWeight: "bold", fontSize: "1vmax", lineHeight: "1", margin: "0.5vmax 0.5vmax 1vmax 0.5vmax" }}>Scroll for more!</p>
           </div>
         </div>
         <div className="sticky">
@@ -63,18 +63,22 @@ function Home() {
           <p className='header-text' onClick={() => document.getElementsByClassName('bottombar')[0].scrollIntoView()}>Contact</p>
         </div>
         <div className='summary'><Highlights /></div>
-        <div className='games' style={{height: "fit-content"}}>
+        <div className='games' style={{ height: "fit-content" }}>
           <p className="header">Games</p>
-          <div style={{display: "grid", gridTemplateColumns: "repeat(3, 18vmax)", gridTemplateRows: "repeat(3, 19.5vmax)", gridGap: "1vmax", marginLeft: "calc((100vw - 56vmax)/2)", marginBottom: "10vmax"}}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 18vmax)", gridTemplateRows: "repeat(4, 19.5vmax)", gridGap: "1vmax", marginLeft: "calc((100vw - 56vmax)/2)", marginBottom: "10vmax" }}>
+            <VertPreview zindex={10} name="Don't Shake The Babies" subtitle="GGJ-2024" images={[
+              ["shakethebaby/Screenshot1.jpg", "Gameplay Programmer"],
+              ["shakethebaby/Screenshot2.jpg", "Merge babies to combine their powers and shake them to release them upon your enemies."],
+            ]} link="https://zeyt8.itch.io/dont-shake-the-babies" />
             <VertPreview zindex={10} name="DOUBLE DOUBLE" subtitle="Bucharest Summer Game Jam (2023)" images={[
-              ["doubledouble/Gif1.gif", "Solo Project"], 
-              ["doubledouble/Screenshot3.png", "You are trapped, all you have is a monitor and a game. Good luck!"], 
-              ["doubledouble/Screenshot4.png", "Solve the puzzles on the monitors around you to open the doors and escape."], 
+              ["doubledouble/Gif1.gif", "Solo Project"],
+              ["doubledouble/Screenshot3.png", "You are trapped, all you have is a monitor and a game. Good luck!"],
+              ["doubledouble/Screenshot4.png", "Solve the puzzles on the monitors around you to open the doors and escape."],
               ["doubledouble/Screenshot5.png", "Completed in just 48 hours, without the use of assets."]
             ]} link="https://bluetimber.itch.io/double-double" />
             <VertPreview zindex={10} name="Only 2% of People Can Finish This?!" subtitle="Thinky Puzzle Game Jam 3 (2023)" images={[
-              ["Puzzlegame.png", "Role: 3D Artist/Technical Artist"], 
-              ["puzzlegame/Circle.png", "A seemingly innocent and simple puzzle game that quickly spirals out of control."], 
+              ["Puzzlegame.png", "Role: 3D Artist/Technical Artist"],
+              ["puzzlegame/Circle.png", "A seemingly innocent and simple puzzle game that quickly spirals out of control."],
               ["puzzlegame/Bomb.png", "I made this game with 3 other people. I was responsible for the 3D models and (procedural) animations."]
             ]} link="https://zeyt8.itch.io/chalk-and-cheese" />
             <VertPreview zindex={9} name="Root Rot" subtitle="GGJ-2023" images={[
@@ -101,7 +105,7 @@ function Home() {
               ["Peasant.png", "Role: 3D Artist/Technical Artist", "cover", "5vw", "0vw"],
               ["peasant/peasantModels.png", "This was my first team project, with a group of 3; a game about medieval peasants fighting through a dungeon."],
               ["peasant/peasant2.png", "Before cancellation I completed multiple models and animations, as well as stylised shaders."],
-              ["peasant/peasant3.png", "This game was cancelled in favour of working on a different game with a bigger team, which is currently in development.", "cover", "4vw", "0vw"]
+              ["peasant/peasant3.png", "This game was cancelled in favour of working on a different game with a bigger team.", "cover", "4vw", "0vw"]
             ]} />
             <VertPreview zindex={4} name="WingJam" subtitle="Unfinished Mobile Game (2021)" images={[
               ["wingjam/wingjam1.gif", "Solo Project"],
@@ -110,14 +114,14 @@ function Home() {
               ["wingjam/wingjam4.gif", "I stopped developing this game when I met other Unity developers to team up with."]
             ]} />
             <VertPreview zindex={3} name="FPS Movement Controller" subtitle="Gameplay Prototype (2019-2020)" images={[
-                ["fps/Fps1.gif", "Solo Project"],
-                ["fps/Fps2.gif", "Before I tried to make full games I spent most of my time on prototyping mechanics. The main one worth showing off is a Titanfall-inspired physics-based movement controller."],
-                ["fps/Fps3.gif", "A lot of time was spend making it feel as smooth as possible and adding as many movement options as possible."],
-                ["fps/Fps4.gif", "I also added a gravity manipulation ability, as well as zero-gravity movement, and a grappling hook(of course)."]
+              ["fps/Fps1.gif", "Solo Project"],
+              ["fps/Fps2.gif", "Before I tried to make full games I spent most of my time on prototyping mechanics. The main one worth showing off is a Titanfall-inspired physics-based movement controller."],
+              ["fps/Fps3.gif", "A lot of time was spend making it feel as smooth as possible and adding as many movement options as possible."],
+              ["fps/Fps4.gif", "I also added a gravity manipulation ability, as well as zero-gravity movement, and a grappling hook(of course)."]
             ]} />
           </div>
         </div>
-        <div className='art' style={{height: "fit-content"}}>
+        <div className='art' style={{ height: "fit-content" }}>
           <p className="header">Art</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 23vmax)", gridTemplateRows: "repeat(9, 23vmax)", gridGap: "1vmax", marginLeft: "calc((100vw - 71vmax)/2)", marginBottom: "10vmax" }}>
             <Landscape image="RobotRock.png" column={1} row={1} />
