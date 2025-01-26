@@ -42,10 +42,10 @@ function Home() {
               <div className="highlight-select" onClick={() => MoveLeft()}><i className="fa-solid fa-chevron-left"></i></div>
               <div className="highlight-browser">
                 <div className='highlight-browser-cont1'>
+                  <Project name="I Am (Noun)" image="iamnoun/cover.png" link="https://zeyt8.itch.io/bubbles" />
                   <Project name="DOUBLE DOUBLE" image="doubledouble/Screenshot1.png" link="https://bluetimber.itch.io/double-double" />
                   <Project name="Only 2% of People Can Finish This?!" image="Puzzlegame.png" link="https://zeyt8.itch.io/chalk-and-cheese" />
                   <Project name="Root Rot" image="Root-rot.png" link="https://zeyt8.itch.io/root-rot" />
-                  <Project name="Snowy Mansion" image="SnowyMansion.png" link="https://www.instagram.com/p/Cswoc_lqu7b/" />
                   <Project name="The Sip of Life" image="SipOfLife.png" link="https://zeyt8.itch.io/the-sip-of-life" />
                 </div>
               </div>
@@ -66,11 +66,17 @@ function Home() {
         <div className='games' style={{ height: "fit-content" }}>
           <p className="header">Games</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 18vmax)", gridTemplateRows: "repeat(4, 19.5vmax)", gridGap: "1vmax", marginLeft: "calc((100vw - 56vmax)/2)", marginBottom: "10vmax" }}>
-            <VertPreview zindex={10} name="Don't Shake The Babies" subtitle="GGJ-2024" images={[
+            <VertPreview zindex={13} name="I Am (Noun)" subtitle="GGJ-2025" images={[
+              ["iamnoun/cover.png", "Artist/Tech Artist"],
+              ["iamnoun/screenshot1.png", "Alter speech bubbles to change what happens."],
+              ["iamnoun/screenshot2.png", "From changing people minds to turning them into birds, and even throwing roads."],
+              ["iamnoun/screenshot3.png", "I made all the art, including the character rig and animations."],
+            ]} link="https://zeyt8.itch.io/bubbles" />
+            <VertPreview zindex={12} name="Don't Shake The Babies" subtitle="GGJ-2024" images={[
               ["shakethebaby/Screenshot1.jpg", "Gameplay Programmer"],
               ["shakethebaby/Screenshot2.jpg", "Merge babies to combine their powers and shake them to release them upon your enemies."],
             ]} link="https://zeyt8.itch.io/dont-shake-the-babies" />
-            <VertPreview zindex={10} name="DOUBLE DOUBLE" subtitle="Bucharest Summer Game Jam (2023)" images={[
+            <VertPreview zindex={11} name="DOUBLE DOUBLE" subtitle="Bucharest Summer Game Jam (2023)" images={[
               ["doubledouble/Gif1.gif", "Solo Project"],
               ["doubledouble/Screenshot3.png", "You are trapped, all you have is a monitor and a game. Good luck!"],
               ["doubledouble/Screenshot4.png", "Solve the puzzles on the monitors around you to open the doors and escape."],
@@ -101,7 +107,7 @@ function Home() {
               ["snails/snails1.png", "Control two snails and sneak/puzzle-solve your way past evil snails to escape."],
               ["snails/snails2.png", "This was my first game jam, and my first game in Unreal Engine. This was made with a team of 3 with me making the 3D models and animations."]
             ]} link="https://zeyt8.itch.io/snails-in-peril" />
-            <VertPreview zindex={5} name="Unitiled Peasant Game" subtitle="Cancelled PC Game (2021)" images={[
+            <VertPreview zindex={5} name="Unitiled Peasant Game" subtitle="Cancelled Game (2021)" images={[
               ["Peasant.png", "Role: 3D Artist/Technical Artist", "cover", "5vw", "0vw"],
               ["peasant/peasantModels.png", "This was my first team project, with a group of 3; a game about medieval peasants fighting through a dungeon."],
               ["peasant/peasant2.png", "Before cancellation I completed multiple models and animations, as well as stylised shaders."],
